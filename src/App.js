@@ -1,50 +1,36 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 import Header from './component/Layout/Header';
-import { BrowserRouter, Routes, Route, Switch } from 'react-router-dom';
-import Home from './pages/Home';
-import { login } from './api/auth';
-import LoginForm from './component/Auth/LoginForm';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import AuthProvider from './context/AuthContext';
 import TaskDashboard from './pages/TaskDashboard';
 import TaskProvider from './context/TaskContext';
 import TaskForm from './component/Task/TaskForm';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
+
   return (
-    // <div className="App">
-    //   <Header />
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p className='text-warning'>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
-    <BrowserRouter>
-      <AuthProvider>
-        <TaskProvider>
-          {(window.location.pathname !== 'login' || window.location.pathname !== 'register') && <Header />}
-          <Routes>
-            <Route path="/" Component={Home} />
-            <Route path="/all-tasks" Component={TaskDashboard} />
-            <Route path="/create-task" Component={TaskForm} />
-            <Route path="/login" Component={Login} />
-            <Route path="/register" Component={Register} />
-          </Routes>
-        </TaskProvider>
-      </AuthProvider>
-    </BrowserRouter>
+    <div className="App">
+      <Router>
+        <AuthProvider>
+          <TaskProvider>
+            <ToastContainer />
+            <Routes>
+              <Route path="/" element={<TaskDashboard />} />
+              <Route path="/create-task" element={<TaskForm />} />
+              <Route path="/edit-task/:id" element={<TaskForm />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
+            </Routes>
+          </TaskProvider>
+        </AuthProvider>
+      </Router>
+    </div>
   );
 }
 

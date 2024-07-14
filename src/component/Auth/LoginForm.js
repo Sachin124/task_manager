@@ -1,6 +1,7 @@
-import React, { useContext, useState } from 'react'
+import { useContext, useState } from 'react';
 import { login as Login} from '../../api/auth';
 import { AuthContext } from '../../context/AuthContext';
+import toastService from '../../services/toastService';
 
 const LoginForm = () => {
 
@@ -11,9 +12,11 @@ const LoginForm = () => {
         e?.preventDefault();
         try {
             const { data } = await Login(username, password);
-            login(username, data.token)
+            login(username, data.token);
+            toastService.success(`Welcome back ${username}`)
             
         } catch (error) {
+            toastService.error('Incorrect username or password')
             console.log(error);
         }
     }

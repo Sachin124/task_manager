@@ -19,7 +19,7 @@ const AuthProvider = ({ children }) => {
         localStorage.setItem('user', JSON.stringify(user));
         localStorage.setItem('token', token);
         setAuthState({ user, token });
-        navigate('/home')
+        navigate('/')
     }
 
     const logout = () => {

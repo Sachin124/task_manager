@@ -6,7 +6,7 @@ const Header = () => {
   const { user, logout } = useContext(AuthContext)
   return (
     <>
-      <nav className="navbar navbar-expand-lg  bg-danger">
+      <nav className="navbar navbar-expand-lg bg-danger">
         <div className="container-fluid">
           <Link className="navbar-brand text-white" to='/'>Task Management</Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,17 +18,13 @@ const Header = () => {
                 <NavLink className="nav-link active text-white" aria-current="page" to='/' >Home</NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active text-white" aria-current="page" to='/all-tasks' >All tasks</Link>
-              </li>
-              <li className="nav-item">
                 <Link className="nav-link active text-white" aria-current="page" to='/create-task' >Create Task</Link>
               </li>
             </ul>
-
-            <div class="d-flex" role="search">
-              <span className='text-white'>Welcome {user}</span>
-              <button class="btn btn-outline-default text-white" onClick={logout}>Logout</button>
+            <div className="w-2">
+              {user && <p className='text-white mx-3 my-auto'>Welcome, {user}</p>}
             </div>
+              <button className="btn btn-outline-light" onClick={logout}>Logout</button>
           </div>
         </div>
       </nav>

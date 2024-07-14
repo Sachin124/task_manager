@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { register } from '../../api/auth';
+import toastService from '../../services/toastService';
 
 const RegisterForm = () => {
     const [username, setUserName] = useState('');
@@ -10,10 +11,10 @@ const RegisterForm = () => {
         e?.preventDefault();
 
         try {
-            const res = await register(username, password, confirmPassword);
-            alert('User Registerd Successfully')
+            await register(username, password, confirmPassword);
+            toastService.success('User Registerd Successfully')
         } catch (error) {
-            console.log(error);
+            toastService.error('Something went wrong!')
         }
     }
     return (

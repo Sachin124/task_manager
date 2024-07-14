@@ -1,6 +1,4 @@
 import React from 'react';
-import Header from '../component/Layout/Header';
-// import Footer from '../components/Layout/Footer';
 
 const Home = () => {
   return (
