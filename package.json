@@ -1,6 +1,5 @@
 {
   "name": "task_management",
-  "type": "module",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,11 +12,6 @@
     "react-scripts": "5.0.1",
     "react-toastify": "^10.0.5",
     "web-vitals": "^2.1.4"
-  },
-  "devDependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "jest": "^27.5.1"
   },
   "scripts": {
     "start": "react-scripts start",
