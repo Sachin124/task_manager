@@ -6,6 +6,12 @@ tasks.
 
 <img width="1786" alt="image" src="https://github.com/user-attachments/assets/f2c8bb8f-ff67-461e-bb08-ce5b342a042c">
 
+## Version
+### NodeJS  --> v22.1.0
+### ReactJS --> v18.3.1
+### NPM     --> v10.7.0
+### You can find other libraries I have used in the package.json file.
+
 ## How to run this tool
 ### Step 1 -> npm install and cd /api npm install 
 ### Step 2 -> npm start and cd /api npm start
