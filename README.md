@@ -1,6 +1,15 @@
-<img width="1786" alt="image" src="https://github.com/user-attachments/assets/f2c8bb8f-ff67-461e-bb08-ce5b342a042c"># Task Management System
+
+# Task Management System
 Develop a task management application where users can edit, delete and track their
 tasks.
+<img width="1786" alt="image" src="https://github.com/user-attachments/assets/f2c8bb8f-ff67-461e-bb08-ce5b342a042c">
+
+## How to run this toold
+### Step 1 -> npm install and cd /api npm install 
+### Step 2 -> npm start and cd /api npm start
+### step 3 -> create db with the name 'task_management_db'
+
+## That's it 
 
 ## The task was completed using the following tech stack.
 ### NodeJS
