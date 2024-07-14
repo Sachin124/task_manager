@@ -1,6 +1,6 @@
 
 # Task Management System
-Develop a task management application where users can edit, delete and track their
+Develop a task management application where users can add, edit, delete and track their
 tasks.
 
 
